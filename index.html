@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yashi Rai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Arial:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #2c3e50; line-height: 1.6; font-size: 16px; min-height: 100vh; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 0; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    header h1 { font-family: 'Georgia', serif; font-size: 32px; font-weight: 700; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+    nav { margin-top: 20px; }
+    nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: 500; font-size: 16px; transition: all 0.3s ease; position: relative; }
+    nav a:hover { color: #ffd700; text-decoration: none; }
+    nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 50%; background-color: #ffd700; transition: all 0.3s ease; }
+    nav a:hover::after { width: 100%; left: 0; }
+    main { padding: 50px 0; }
+    section { margin-bottom: 70px; background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 15px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+    .section-title { font-family: 'Georgia', serif; font-size: 24px; font-weight: 700; margin-bottom: 25px; color: #2c3e50; position: relative; padding-bottom: 15px; }
+    .section-title::after { content: ''; position: absolute; width: 60px; height: 3px; bottom: 0; left: 0; background: linear-gradient(45deg, #667eea, #764ba2); border-radius: 2px; }
+    #about p { font-size: 16px; text-align: justify; margin-bottom: 20px; color: #34495e; }
+    #education ul { list-style: none; padding: 0; }
+    #education li { font-size: 16px; margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-left: 4px solid #3498db; border-radius: 0 8px 8px 0; }
+    #projects .project { margin-bottom: 30px; padding: 25px; border: none; background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    #projects .project:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+    #projects .project-title { font-family: 'Georgia', serif; font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #2c3e50; display: flex; align-items: center; }
+    #projects .project-title::before { content: '🚀'; margin-right: 10px; }
+    #projects p { font-size: 16px; margin-bottom: 12px; text-align: justify; color: #5a6c7d; }
+    #skills ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; }
+    #skills li { font-size: 16px; margin-bottom: 0; flex: 1; min-width: 200px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); }
+    #skills strong { font-weight: 700; display: block; margin-bottom: 10px; font-size: 18px; }
+    #certifications ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    #certifications li { font-size: 16px; margin-bottom: 0; padding: 20px; border-left: 4px solid #27ae60; background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); border-radius: 0 10px 10px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+    #certifications li:hover { transform: translateX(5px); }
+    #contact { text-align: center; background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; }
+    #contact .section-title { color: white; }
+    #contact .section-title::after { background: #ffd700; }
+    #contact p { font-size: 16px; margin-bottom: 15px; }
+    #contact a { color: #ffd700; text-decoration: none; font-weight: 500; }
+    #contact a:hover { text-decoration: underline; }
+    .contact-icons { margin-top: 30px; }
+    .contact-icons a { color: white; font-size: 24px; margin: 0 15px; text-decoration: none; transition: all 0.3s ease; }
+    .contact-icons a:hover { color: #ffd700; transform: scale(1.2); }
+    footer { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: #bdc3c7; text-align: center; padding: 25px 0; font-size: 16px; box-shadow: 0 -4px 20px rgba(0,0,0,0.1); }
+    footer a { color: #ffd700; text-decoration: none; font-weight: 500; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+      .container { padding: 0 15px; }
+      header h1 { font-size: 28px; }
+      nav a { display: block; margin: 10px 0; }
+      section { margin-bottom: 40px; padding: 25px; }
+      .section-title { font-size: 20px; }
+      #projects .project { padding: 20px; }
+      #skills ul { flex-direction: column; }
+      #skills li { min-width: auto; }
+      #certifications ul { grid-template-columns: 1fr; }
+      .contact-icons a { margin: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Yashi Rai</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section id="about">
+        <h2 class="section-title">Profile</h2>
+        <p>• Inquisitive Computer Science student with a proclivity for deconstructing complex problems into structured, data-informed solutions. Adept at distilling raw information into coherent patterns and synthesizing impactful, scalable outcomes. Exhibits intellectual agility in adapting to evolving technologies, driven by a persistent pursuit of refinement, innovation, and pragmatic problem-solving.</p>
+      </section>
+      <section id="education">
+        <h2 class="section-title">Education</h2>
+        <ul>
+          <li>Noida Institute of Engineering and Technology, Greater Noida 2022 – 2026<br>B.Tech in Computer Science and Engineering</li>
+        </ul>
+      </section>
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project">
+          <h3 class="project-title">🎬 Movie Recommendation System</h3>
+          <p>– Developed a content-based Movie Recommendation System using Python, leveraging TF-IDF vectorization and cosine similarity to generate top 10 personalized movie suggestions</p>
+          <p>– Processed and analyzed movie metadata (titles, genres, keywords, cast) with data cleaning, preprocessing, and feature engineering to build an efficient recommendation engine</p>
+          <p>– Implemented NLP techniques such as tokenization and feature extraction to enhance recommendation accuracy and relevance</p>
+          <p>– Utilized Scikit-learn for similarity computation and optimized the model for faster and efficient performance</p>
+          <p><strong>🔗 GitHub Repository:</strong> <a href="https://github.com/Yashi1211/Movie-Recommendation-System" target="_blank" style="color: #667eea; text-decoration: none;">View on GitHub</a></p>
+        </div>
+        <div class="project">
+          <h3 class="project-title">🤖 AI Career Navigator</h3>
+          <p>– Built an AI-powered resume analyzer that outputs missing skills, a 4-week roadmap, and a job readiness score for a selected role</p>
+          <p>– Integrated OpenRouter Chat Completions REST API using async JavaScript (fetch) with safe JSON/error handling</p>
+          <p>– Improved reliability by handling 404 model issues and 429 rate-limits with fallback models, retries, and wait/backoff</p>
+          <p>– Designed a responsive, modern UI with clear loading states and accessible output updates (ARIA live region)</p>
+          <p><strong>🔗 GitHub Repository:</strong> <a href="https://github.com/Yashi1211/ai-career-navigator" target="_blank" style="color: #667eea; text-decoration: none;">View on GitHub</a></p>
+        </div>
+      </section>
+      <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <ul>
+          <li><strong>Programming</strong><br>Python, Java, SQL, Data Structures</li>
+          <li><strong>Development</strong><br>Asynchronous JavaScript, HTML, CSS, React</li>
+          <li><strong>Tools & Platforms</strong><br>Git, GitHub</li>
+        </ul>
+      </section>
+      <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <ul>
+          <li>Python for Data Science and AI Development – Coursera</li>
+          <li>Object-Oriented Programming in Java – Coursera</li>
+          <li>Introduction to Artificial Intelligence (AI) – IBM</li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>Email: <a href="mailto:yrai7870@email.com">yrai7870@email.com</a></p>
+        <p>Phone: +91-9871340074</p>
+        <div class="contact-icons">
+          <a href="https://www.linkedin.com/in/yashi-rai-402b23261/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Yashi1211" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>© 2026 Yashi Rai | Built with ❤️ | <a href="https://github.com/Yashi1211/Portfolio" target="_blank">View Source on GitHub</a></p>
+    </div>
+  </footer>
+</body>
+</html>
