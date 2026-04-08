@@ -71,7 +71,7 @@ Portfolio/
 
 ## 📧 Contact
 
-- **Email**: [yashi.rai@example.com](mailto:yashi.rai@example.com)
+- **Email**: [yrai7870@example.com](mailto:yrai7870@example.com)
 - **GitHub**: [@Yashi1211](https://github.com/Yashi1211)
 - **LinkedIn**: [Connect on LinkedIn](https://linkedin.com/in/yashi-rai)
 
